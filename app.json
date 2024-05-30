@@ -2,6 +2,7 @@
   "expo": {
     "name": "laundrymate",
     "slug": "laundrymate",
+    "scheme": "laundrymate",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,8 +21,12 @@
         "backgroundColor": "#ffffff"
       }
     },
+  
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

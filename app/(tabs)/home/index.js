@@ -11,8 +11,10 @@ import { Octicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const index = () => {
+  const router=useRouter()
   return (
     <ScrollView>
       <View style={{ backgroundColor: "#FEBE10", height: 200, padding: 10 }}>
@@ -116,6 +118,7 @@ const index = () => {
               }}
             >
               <Pressable
+              onPress={()=>router.push("/home/address")}
                 style={{
                   backgroundColor: "#FEBE10",
                   borderRadius: 5,
@@ -147,7 +150,7 @@ const index = () => {
           flexDirection: "row",
           alignItems: "center",
           gap: 10,
-          marginHorizontal:15
+          marginHorizontal: 15,
         }}
       >
         <View
@@ -203,10 +206,172 @@ const index = () => {
                 Place Your <Text style={{ color: "#034694" }}>Order</Text>
               </Text>
 
-              <Text style={{width:130,fontSize:12,fontWeight:'300',marginTop:10}}>Select items from the catalogue below</Text>
-              <Text style={{width:130,fontSize:12,fontWeight:'300',marginTop:5}}>and book your order. It's about time</Text>
+              <Text
+                style={{
+                  width: 130,
+                  fontSize: 12,
+                  fontWeight: "300",
+                  marginTop: 10,
+                }}
+              >
+                Select items from the catalogue below
+              </Text>
+              <Text
+                style={{
+                  width: 130,
+                  fontSize: 12,
+                  fontWeight: "300",
+                  marginTop: 6,
+                }}
+              >
+                and book your order. It's about time
+              </Text>
             </View>
           </View>
+        </View>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
+          // alignItems: "center",
+          gap: 10,
+          marginHorizontal: 15,
+          marginVertical: 10,
+          // backgroundColor:'red'
+        }}
+      >
+        <View>
+          <View
+            style={{
+              backgroundColor: "white",
+              padding: 12,
+              borderRadius: 12,
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <View>
+              <Text
+                style={{
+                  fontSize: 13,
+                  fontWeight: "500",
+                  color: "#034694",
+                  width: 130,
+                }}
+              >
+                Affordable Prices
+              </Text>
+              <Text style={{ marginTop: 5 }}>Get out price list</Text>
+            </View>
+            <Entypo name="triangle-right" size={24} color="#034694" />
+          </View>
+          <View
+            style={{
+              backgroundColor: "white",
+              padding: 12,
+              borderRadius: 12,
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 12,
+              marginTop: 10,
+            }}
+          >
+            <View>
+              <Text
+                style={{
+                  fontSize: 13,
+                  fontWeight: "500",
+                  color: "#034694",
+                  width: 130,
+                }}
+              >
+                Affordable Prices
+              </Text>
+              <Text style={{ marginTop: 5 }}>Get out price list</Text>
+            </View>
+            <Entypo name="triangle-right" size={24} color="#034694" />
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            backgroundColor: "white",
+            borderRadius: 12,
+            gap: 10,
+            padding: 12,
+          }}
+        >
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <View>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: "#FEBE10",
+                  width: 100,
+                  fontWeight: "bold",
+                }}
+              >
+                WHAT's THE PLAN
+              </Text>
+
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: "#034694",
+                  width: 100,
+                  fontWeight: "bold",
+                }}
+              >
+                FOR THE PLANET
+              </Text>
+            </View>
+            <Entypo name="triangle-right" size={24} color="#034694" />
+          </View>
+        </View>
+      </View>
+
+      <View style={{ marginLeft: "auto", marginRight: "auto" }}>
+        <View
+          style={{ backgroundColor: "white", padding: 12, borderRadius: 12 }}
+        >
+          <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
+            <Ionicons name="notifications-outline" size={24} color="black" />
+            <Text>Next Available</Text>
+          </View>
+
+          <View>
+            <Text
+              style={{
+                fontSize: 14,
+                fontWeight: "500",
+                marginTop: 5,
+                color: "#034694",
+                width: 150,
+                textAlign: "center",
+              }}
+            >
+              Order Within 15 mins to catch this pickUp Slot
+            </Text>
+          </View>
+
+          <Pressable
+            style={{
+              borderWidth: 0.7,
+              borderColor: "#034694",
+              borderRadius: 5,
+              padding: 5,
+              alignItems: "center",
+              marginHorizontal: 10,
+              marginVertical: 5,
+              marginTop: 5,
+            }}
+          >
+            <Text>ADD ITEMS</Text>
+          </Pressable>
         </View>
       </View>
     </ScrollView>
